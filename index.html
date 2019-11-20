@@ -55,7 +55,6 @@
         h1 {
             font-family: var(--logoFont);
             font-size: 3em;
-            color: var(-subtleColor);
         }
 
         h2,
@@ -104,12 +103,11 @@
         }
 
         .contact {
-            font-size: 0.9rem;
+            font-family: var(--logoFont);
             padding: 1rem;
             display: inline-block;
             margin-top: 0;
             background-color: var(--subtleBgColor);
-            font-family: var(--headerFont);
             line-height: 1.45;
             font-weight: var(--normal);
         }
@@ -123,35 +121,18 @@
             display: block;
         }
 
-        .contact .name {
-            font-family: var(--headerFont);
-        }
-
         h1 {
             margin-bottom: 0.3rem;
         }
 
         h1 span {
-            font-size: 1em;
+            font-size: 1rem;
+            color: var(-subtleColor);
         }
 
         ul,
         h2 {
             margin: 1rem 0;
-        }
-
-        .moto {
-            font-size: 1.13rem;
-            margin-bottom: 1rem;
-        }
-
-        .hidden {
-            display: none !important;
-        }
-
-        blockquote,
-        .additional {
-            font-style: italic;
         }
     </style>
     <script type="application/ld+json">
@@ -186,7 +167,6 @@
     <div class="page">
         <header>
             <h1>undefuned <span>s.r.o.</span></h1>
-            <div class="moto">cloud architect - David Cizek</div>
         </header>
         <section>
             <h2>When you need the job to be done, reliably, fast, efficient</h2>
@@ -199,7 +179,8 @@
                     <li>React frontend</li>
                 </ul>
             </div>
-            <p> I'm familiar with these. I like them. I use them very often. </p>
+            <p> I'm familiar with these. I like them. I use them very often. <em>~ David Cizek,
+                    founder</em></p>
         </section>
         <section>
             <h2> Contact </h2>
@@ -208,8 +189,8 @@
             <p> Interested? Let's schedule a chat. </p>
             <p class="contact" itemscope itemtype="http://schema.org/Person">
                 <span class="name block" itemprop="name">David Cizek</span>
-                <span class="hidden" itemprop="jobTitle">Software architect; cloud, serverless;
-                    Node.js, Go developer</span>
+                <span itemprop="jobTitle">software architect; aws cloud, serverless; Node.js, Go
+                    developer</span>
                 <span class="block" itemprop="email"><a
                         href="david@undefuned.com">david@undefuned.com</a></span>
                 <span class="block"><a href="skype:davidczk?chat">skype: davidczk</a></span>
