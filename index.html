@@ -10,8 +10,6 @@
     <meta name="author" content="David Cizek" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:300,600&display=swap"
-        rel="stylesheet">
     <style type="text/css">
         :root {
             --mainFont: serif;
@@ -21,12 +19,13 @@
             --bold: 900;
             --semibold: 500;
             --normal: 400;
-            --logoFont: 'Source Code Pro', monospace;
-            --headerFont: helvetica, arial, sans-serif;
+            --logoFont: Verdana, Ubuntu, sans-serif;
+            --headerFont: Verdana, Ubuntu, sans-serif;
             --maxWidth: 50em;
             --padding: 2em;
             --bgColor: #f8f8f4;
             --mainColor: #222222;
+            --submainColor: #666666;
             --subtleColor: #bababa;
             --subtleBgColor: #dadada;
         }
@@ -52,15 +51,26 @@
             color: var(--mainColor);
         }
 
-        h1 {
+        header h1 {
             font-family: var(--logoFont);
             font-size: 3em;
-            margin-bottom: 0.3rem;
+            margin-bottom: 0;
+            padding-bottom: 0;
+            letter-spacing: -0.05rem;
+            line-height: 1;
         }
 
-        h1 span {
-            font-size: 1rem;
-            color: var(-subtleColor);
+        header h2 {
+            font-weight: normal;
+            margin-top: 0.7rem;
+            padding-top: 0;
+            color: var(--submainColor);
+        }
+
+        h3.claim {
+            padding: 1rem;
+            border: 1px solid var(--subtleBgColor);
+            margin-bottom: 3rem;
         }
 
         h2,
@@ -68,7 +78,7 @@
         h4 {
             font-family: var(--logoFont);
             font-weight: 600;
-            line-height: 1;
+            /*  line-height: 1;  */
         }
 
         .important {
@@ -83,8 +93,7 @@
         header {
             font-family: var(--headerFont);
             font-weight: var(--semibold);
-            border-bottom: 1px solid var(--subtleColor);
-            padding-bottom: 0.667rem;
+            padding-bottom: 0;
             margin-bottom: 1rem;
         }
 
@@ -101,7 +110,6 @@
 
         section {
             padding: 0.667rem 0;
-            border-bottom: 1px solid var(--subtleColor);
         }
 
         .contact {
@@ -162,7 +170,7 @@
         "founder": {
             "@type": "Person",
             "name": "David Cizek",
-            "jobTitle": "Software architect; AWS cloud, microservices, serverless; Node.js, Go developer",
+            "jobTitle": "Cloud architect; AWS, microservices, serverless; Node.js, Go developer",
             "sameAs": [
               "http://www.linkedin.com/in/davidcizek",
               "https://github.com/dacz"
@@ -175,32 +183,46 @@
 <body>
     <div class="page">
         <header>
-            <h1>undefuned <span>s.r.o.</span></h1>
+            <h1>undefuned</h1>
+            <h2>living by the cloud</h2>
         </header>
         <section>
-            <h2>When you need up-to-date solution</h2>
-            <div>
-                <ul>
-                    <li>in the cloud, serverless, using AWS</li>
-                    <li>microservices in node.js, go</li>
-                    <li>event-driven architecture for flexibility</li>
-                    <li>GraphQL API</li>
-                    <li>React or Svelte frontend</li>
-                    <li>passing on experience to your team</li>
-                </ul>
-            </div>
-            <p> I'm familiar with these. I like them. I use them very often.<br /><em>~ David Cizek,
-                    founder</em></p>
+            <h3 class="claim">You know (or feel) that the power of cloud computing can make a
+                massive difference to your product or service. I can help you with that journey.
+            </h3>
+            <p> Undefuned is not a typical agency-like software shop. </p>
+            <ul>
+                <li><strong>Result oriented.</strong> I don't offer you an hourly rate. I think that
+                    it doesn't reflect the outcome you want - working solution. </li>
+                <li><strong>Selected tools.</strong> I don't do "everything you want." I strive to
+                    master selected tools to stay on the edge so you can get the best solution.
+                </li>
+                <li><strong>The team.</strong> You'll get the solution, <em>and</em> your team will
+                    know how it is built and can build upon it. Know-how transfer should be part of
+                    the result.</li>
+            </ul>
+        </section>
+        <section>
+            <h2>The tools</h2>
+            <p>I selected the following tools because they are definitely between the leaders. I do
+                not claim they are the best, as it's highly subjective. But they are excellent,
+                offer all that's needed to accomplish the tasks in full scope, and I know them very
+                well. Of course, I continually evaluate all other solutions, tools, trends so that
+                the list may evolve.</p>
+            <ul>
+                <li>microservices, event-driven architecture, serverless and managed services where
+                    possible</li>
+                <li>AWS and CloudFormation</li>
+                <li>Node.js, Go</li>
+                <li>Developer friendly code and project managing tools (GitHub, GitLab)</li>
+            </ul>
         </section>
         <section>
             <h2> Contact </h2>
-            <p> I usually work remotely. Most of the time I'm in Prague, Czech Republic, Europe, but
-                I'm ready to explore new places.</p>
-            <p> Interested? Let's schedule a chat. </p>
+            <p> I usually work remotely. Most of the time I'm in Prague, Czech Republic, Europe.</p>
             <p class="contact" itemscope itemtype="http://schema.org/Person">
                 <span class="name block" itemprop="name">David Cizek</span>
-                <span itemprop="jobTitle">software architect; aws cloud, serverless; Node.js, Go
-                    developer</span>
+                <span itemprop="jobTitle">founder</span>
                 <span class="block" itemprop="email"><a
                         href="david@undefuned.com">david@undefuned.com</a></span>
                 <span class="block"><a href="skype:davidczk?chat">skype: davidczk</a></span>
@@ -224,8 +246,14 @@
                 <span class="block">vložka 322903</span>
             </p>
         </section>
-        <footer> This site does NOT use cookie. Content is created with <a
-                href="https://creativecommons.org/licenses/by/4.0/"
+        <section>
+            <h3>Developer?</h3>
+            <p>Do you like this mindset? It's not unusual that I need to find more people to build a
+                team that works together with the client. Transparency is a key - the client will
+                know you, you will know all the details about the arrangement.</p>
+        </section>
+        <footer> This site does NOT use cookie and does NOT load content from any other site.
+            Content is created with <a href="https://creativecommons.org/licenses/by/4.0/"
                 title="Creative Common BY license">cc-by license</a>. </footer>
     </div>
 </body>
