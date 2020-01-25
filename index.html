@@ -14,21 +14,24 @@
         rel="stylesheet">
     <style type="text/css">
         :root {
-            --mainFont: serif;
-            --baseFontSize: 16px;
+            --mainFont: sans-serif;
+            --baseFontSize: 18px;
             --baseLineHeight: 1.8;
             --smallerFontSize: 0.75em;
             --bold: 900;
             --semibold: 500;
             --normal: 400;
-            --logoFont: 'Source Code Pro', monospace;
-            --headerFont: helvetica, arial, sans-serif;
+            --logoFont: Tahoma, 'Source Code Pro', monospace;
+            --headerFont: Tahoma, helvetica, arial, sans-serif;
             --maxWidth: 50em;
             --padding: 2em;
             --bgColor: #f8f8f4;
             --mainColor: #222222;
+            --semiSubtleColor: #6b6b6b;
             --subtleColor: #bababa;
             --subtleBgColor: #dadada;
+            --clouds: rgba(234, 250, 255, 1);
+            --grass: rgba(226, 255, 226, 1)
         }
 
         html {
@@ -42,54 +45,134 @@
             box-sizing: inherit;
         }
 
+        a,
+        a:visited {
+            color: var(--mainColor);
+        }
+
+        p {
+            margin: 0;
+            padding: 0;
+        }
+
+        .inone {
+            white-space: nowrap;
+        }
+
         body {
             font-family: var(--logoFont);
             margin: 0;
-            padding: 2rem;
-            padding-bottom: 1rem;
+            padding: 0;
             line-height: var(--baseLineHeight);
             background-color: var(--bgColor);
             color: var(--mainColor);
         }
 
+        .page {
+            max-width: 40em;
+            margin: 0 auto;
+            text-align: center;
+            padding: 0 1rem;
+        }
+
+        /*  -------------  */
+        .intro {
+            padding-top: 4rem;
+            padding-bottom: 1.5rem;
+            background: rgb(255, 255, 247);
+            background: linear-gradient(0deg, rgba(255, 255, 247, 1) 0%, rgba(255, 255, 220, 1) 100%);
+        }
+
+        .you-have span {
+            text-decoration: none;
+            padding-left: 0.15rem;
+            padding-right: 0.15rem;
+        }
+
+        span.awesome,
+        span.wow {
+            background-color: var(--grass);
+        }
+
+        span.xxawesome,
+        span.wow {
+            background-color: rgb(255, 255, 179);
+        }
+
+        span.booo {
+            background-color: rgb(247, 205, 204);
+        }
+
+        span.great {
+            background-color: var(--clouds);
+        }
+
+        /*  -------------  */
+        .what {
+            background: var(--clouds);
+            background: linear-gradient(180deg, rgba(243, 252, 255, 1) 0%, var(--clouds) 4%, rgba(209, 244, 255, 1) 59%, rgba(209, 244, 255, 1) 90%, rgba(188, 239, 255, 1) 100%);
+            padding-top: 1.5rem;
+            padding-bottom: 1.5rem;
+        }
+
         h1 {
             font-family: var(--logoFont);
-            font-size: 3em;
-            margin-bottom: 0.3rem;
+            font-size: 1.2rem;
+            margin: 0;
+            padding: 0;
+            line-height: 1.45;
         }
 
         h1 span {
-            font-size: 1rem;
-            color: var(-subtleColor);
+            font-size: 2rem;
+            font-weight: bold;
         }
 
-        h2,
-        h3,
-        h4 {
-            font-family: var(--logoFont);
-            font-weight: 600;
-            line-height: 1;
+        /*  -------------  */
+        .passion {
+            padding-top: 2rem;
+            padding-bottom: 4rem;
+            background: var(--grass);
+            background: linear-gradient(180deg, rgba(207, 255, 207, 1) 0%, var(--grass) 4%, rgba(234, 255, 234, 1) 80%, rgba(248, 248, 248, 1) 100%);
         }
 
-        .important {
-            font-weight: var(--bold);
+        .i-am {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            font-weight: bold;
         }
 
-        .page {
-            max-width: 50em;
-            margin: 0 auto;
+        .my-links {
+            margin-top: 0;
+            padding-top: 0;
+            font-size: var(--smallerFontSize);
+            color: var(--semiSubtleColor);
         }
 
-        header {
-            font-family: var(--headerFont);
-            font-weight: var(--semibold);
-            border-bottom: 1px solid var(--subtleColor);
-            padding-bottom: 0.667rem;
-            margin-bottom: 1rem;
+        .my-links a {
+            color: var(--semiSubtleColor);
         }
 
-        footer {
+        /*  -------------  */
+        .touch {
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+            font-size: var(--smallerFontSize);
+            color: var(--semiSubtleColor);
+        }
+
+        .name {
+            font-weight: bold;
+        }
+
+        .legal {
+            color: var(--subtleColor);
+        }
+
+        /*  -------------  */
+        footer div {
             padding-top: 1rem;
+            padding-bottom: 1rem;
             font-size: 0.8em;
             color: var(--subtleColor);
         }
@@ -97,51 +180,6 @@
         footer a,
         footer a:visited {
             color: var(--subtleColor);
-        }
-
-        section {
-            padding: 0.667rem 0;
-            border-bottom: 1px solid var(--subtleColor);
-        }
-
-        .contact {
-            font-family: var(--logoFont);
-            padding: 1rem;
-            display: inline-block;
-            margin-top: 0;
-            background-color: var(--subtleBgColor);
-            line-height: 1.45;
-            font-weight: var(--normal);
-        }
-
-        .contact .name,
-        .compinfo .name {
-            font-weight: 600;
-        }
-
-        .contact a,
-        .contact a:visited {
-            color: var(--mainColor);
-        }
-
-        .contact span.block,
-        .compinfo span.block {
-            display: block;
-        }
-
-        .compinfo {
-            font-family: var(--logoFont);
-            margin-top: 0;
-            line-height: 1.45;
-            font-weight: var(--normal);
-            padding: 1rem;
-            display: inline-block;
-            border: 1px solid var(--subtleBgColor);
-        }
-
-        ul,
-        h2 {
-            margin: 1rem 0;
         }
     </style>
     <script type="application/ld+json">
@@ -164,70 +202,65 @@
             "name": "David Cizek",
             "jobTitle": "Software architect; AWS cloud, microservices, serverless; Node.js, Go developer",
             "sameAs": [
-              "http://www.linkedin.com/in/davidcizek",
+              "https://www.linkedin.com/in/davidcizek",
               "https://github.com/dacz"
             ]
         }
       }
     </script>
+    <script type="text/javascript">
+        function openit() {
+            var a = "ma"
+            var b = "ilto:"
+            var c = "funed.c"
+            var d = "david"
+            document.location = `${a}${b}${d}${String.fromCharCode(65 - 1)}unde${c}om`;
+        }
+    </script>
 </head>
 
 <body>
-    <div class="page">
-        <header>
-            <h1>undefuned <span>s.r.o.</span></h1>
-        </header>
-        <section>
-            <h2>When you need up-to-date solution</h2>
-            <div>
-                <ul>
-                    <li>in the cloud, serverless, using AWS</li>
-                    <li>microservices in node.js, go</li>
-                    <li>event-driven architecture for flexibility</li>
-                    <li>GraphQL API</li>
-                    <li>React or Svelte frontend</li>
-                    <li>passing on experience to your team</li>
-                </ul>
-            </div>
-            <p> I'm familiar with these. I like them. I use them very often.<br /><em>~ David Cizek,
-                    founder</em></p>
-        </section>
-        <section>
-            <h2> Contact </h2>
-            <p> I usually work remotely. Most of the time I'm in Prague, Czech Republic, Europe, but
-                I'm ready to explore new places.</p>
-            <p> Interested? Let's schedule a chat. </p>
-            <p class="contact" itemscope itemtype="http://schema.org/Person">
-                <span class="name block" itemprop="name">David Cizek</span>
-                <span itemprop="jobTitle">software architect; aws cloud, serverless; Node.js, Go
-                    developer</span>
-                <span class="block" itemprop="email"><a
-                        href="david@undefuned.com">david@undefuned.com</a></span>
-                <span class="block"><a href="skype:davidczk?chat">skype: davidczk</a></span>
-                <span class="block" itemprop="url">https://undefuned.com/</span>
-                <span class="block">
-                    <span itemprop="sameAs" content="https://github.com/dacz"><a
-                            href="https://github.com/dacz">GitHub</a></span>, <span
-                        itemprop="sameAs" content="http://www.linkedin.com/in/davidcizek"><a
-                            href="http://www.linkedin.com/in/davidcizek">LinkedIn</a></span>,
-                    <span><a href="https://medium.com/@dadc">Medium</a></span>
-                </span>
-            </p>
-            <h3>Company info:</h3>
-            <p class="compinfo">
-                <span class="name block">Undefuned s.r.o.</span>
-                <span class="block">Revolucni 1082/8, 110 00 Prague 1</span>
-                <span class="block">Czech Republic</span>
-                <span class="block">ico/companyID: 086 67 853</span>
-                <span class="block">zapsána v obchodním rejstříku,</span>
-                <span class="block">vedeném Městským soudem v Praze oddíl C,</span>
-                <span class="block">vložka 322903</span>
-            </p>
-        </section>
-        <footer> This site does NOT use cookie. Content is created with <a
-                href="https://creativecommons.org/licenses/by/4.0/"
-                title="Creative Common BY license">cc-by license</a>. </footer>
+    <div class="intro">
+        <div class="page">
+            <p class="you-have">You have a <span class="awesome">startup,</span><br />the <span
+                    class="wow">shiny new product,</span><br />a <span class="booo">monolith</span
+                    class="great"> that slows and drags you down<br />or you simply want to
+                have<br /><span class="great">agile and maintainable</span class="great"> IT
+                infrastructure based on…</p>
+        </div>
     </div>
+    <div class="what">
+        <div class="page">
+            <h1>…event-driven <span>microservices</span><br />in <span>node.js</span> or
+                <span>go</span>,<br />often <span>serverless</span>,<br />with good development
+                practices like<br /><span>automated CI/CD</span><br />built in <span>AWS
+                    cloud</span>. </h1>
+        </div>
+    </div>
+    <div class="passion">
+        <div class="page">
+            <p class="i-do">That's my passion and that's the job I can do for you.</p>
+            <p class="i-am">David Cizek</p>
+            <p class="my-links"> (<a href="#" onClick="openit()" title="send me an email">email</a>,
+                <a href="https://www.linkedin.com/in/davidcizek"
+                    title="linkedIn profile">linkedIn</a>) </p>
+        </div>
+    </div>
+    <div class="touch">
+        <div class="page">
+            <p class="name">Undefuned s.r.o.</p>
+            <p class="addr"><span class="inone">Revolucni 1082/8,</span> <span class="inone">110 00
+                    Prague 1,</span> <span class="inone">Czech Republic</span></p>
+            <p class="legal"><span class="inone">companyID: 086 67 853,</span> registered in
+                commercial register in Prague, <span class="inone">Czech Republic,</span> <span
+                    class="inone">section C,</span> <span class="inone">insert 322903</span></p>
+        </div>
+    </div>
+    <footer class="page">
+        <div> No cookies here. Content is created with <a
+                href="https://creativecommons.org/licenses/by/4.0/"
+                title="Creative Common BY license">cc-by license</a>. </div>
+    </footer>
 </body>
 
 </html>
