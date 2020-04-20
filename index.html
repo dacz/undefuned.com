@@ -4,16 +4,15 @@
 <head>
     <meta charset="UTF-8" />
     <title>undefuned - Cloud solutions</title>
-    <meta name="description"
-        content="Cloud development, microservices, AWS, serverless, Node.js, Go, event-driven architecture, ..." />
-    <meta name="keywords" content="Node.js, AWS, Cloud, Go, microservices, event-driven" />
+    <meta name="description" content="Microservices, AWS, serverless, Docker, Go, Node.js" />
+    <meta name="keywords" content="Node.js, AWS, Cloud, Go, microservices" />
     <meta name="author" content="David Cizek" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta name="format-detection" content="telephone=no">
     <style type="text/css">
         :root {
-            --mainFont: Tahoma, helvetica, arial, sans-serif;
+            --mainFont: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
             --baseFontSize: 18px;
             --baseLineHeight: 1.8;
             --smallerFontSize: 0.75em;
@@ -22,13 +21,12 @@
             --mainColor: #222222;
             --semiSubtleColor: #6b6b6b;
             --subtleColor: #bababa;
-            --clouds: rgba(234, 250, 255, 1);
-            --grass: rgba(226, 255, 226, 1)
         }
 
         html {
             box-sizing: border-box;
             font-size: var(--baseFontSize);
+            height: 100%;
         }
 
         *,
@@ -55,9 +53,14 @@
             font-family: var(--mainFont);
             margin: 0;
             padding: 0;
+            height: 100%;
             line-height: var(--baseLineHeight);
             background-color: var(--bgColor);
             color: var(--mainColor);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
         }
 
         .page {
@@ -68,62 +71,9 @@
         }
 
         /*  -------------  */
-        .intro {
-            padding-top: 4rem;
-            padding-bottom: 1.5rem;
-            background: rgb(255, 255, 247);
-            background: linear-gradient(0deg, rgba(255, 255, 247, 1) 0%, rgba(255, 255, 220, 1) 100%);
-        }
-
-        .you-have span {
-            text-decoration: none;
-            padding-left: 0.15rem;
-            padding-right: 0.15rem;
-        }
-
-        span.awesome {
-            background-color: var(--grass);
-        }
-
-        span.wow {
-            background-color: rgb(255, 255, 179);
-        }
-
-        span.booo {
-            background-color: rgb(247, 205, 204);
-        }
-
-        span.great {
-            background-color: var(--clouds);
-        }
-
-        /*  -------------  */
-        .what {
-            background: var(--clouds);
-            background: linear-gradient(180deg, rgba(243, 252, 255, 1) 0%, var(--clouds) 4%, rgba(209, 244, 255, 1) 59%, rgba(209, 244, 255, 1) 90%, rgba(188, 239, 255, 1) 100%);
-            padding-top: 1.5rem;
-            padding-bottom: 1.5rem;
-        }
-
-        h1 {
-            font-family: var(--mainFont);
-            font-size: 1.2rem;
-            margin: 0;
-            padding: 0;
-            line-height: 1.45;
-        }
-
-        h1 span {
-            font-size: 2rem;
-            font-weight: bold;
-        }
-
-        /*  -------------  */
         .passion {
-            padding-top: 2rem;
-            padding-bottom: 4rem;
-            background: var(--grass);
-            background: linear-gradient(180deg, rgba(207, 255, 207, 1) 0%, var(--grass) 4%, rgba(234, 255, 234, 1) 80%, rgba(248, 248, 248, 1) 100%);
+            padding-top: 1rem;
+            padding-bottom: 1rem;
         }
 
         .i-am {
@@ -145,8 +95,8 @@
 
         /*  -------------  */
         .touch {
-            padding-top: 2rem;
-            padding-bottom: 2rem;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
             font-size: var(--smallerFontSize);
             color: var(--semiSubtleColor);
         }
@@ -210,30 +160,13 @@
 </head>
 
 <body>
-    <div class="intro">
-        <div class="page">
-            <p class="you-have">You have a <span class="awesome">startup,</span><br />the <span
-                    class="wow">shiny new product,</span><br />a <span class="booo">monolith</span
-                    class="great"> that slows and drags you down<br />or you simply want to
-                have<br /><span class="great">agile and maintainable</span class="great"> IT
-                infrastructure based on…</p>
-        </div>
-    </div>
-    <div class="what">
-        <div class="page">
-            <h1>…event-driven <span>microservices</span><br />in <span>node.js</span> or
-                <span>go</span>,<br />often <span>serverless</span>,<br />with good development
-                practices like<br /><span class="inone">automated CI/CD</span><br />built in <span
-                    class="inone">AWS cloud</span>. </h1>
-        </div>
-    </div>
     <div class="passion">
         <div class="page">
-            <p class="i-do">That's my passion and that's the job I can do for you.</p>
             <p class="i-am">David Cizek</p>
             <p class="my-links"> (<a href="#" onClick="openit()" title="send me an email">email</a>,
                 <a href="https://www.linkedin.com/in/davidcizek"
                     title="linkedIn profile">linkedIn</a>) </p>
+            <p>microservices, serverless, AWS cloud, go, node.js</p>
         </div>
     </div>
     <div class="touch">
