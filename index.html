@@ -14,9 +14,6 @@
         :root {
             --mainFont: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
             --baseFontSize: 18px;
-            --baseLineHeight: 1.8;
-            --smallerFontSize: 0.75em;
-            --maxWidth: 40em;
             --bgColor: #f8f8f4;
             --mainColor: #222222;
             --semiSubtleColor: #6b6b6b;
@@ -61,129 +58,60 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            /* justify-content: space   -between; */
         }
 
-        .page {
-            max-width: var(--maxWidth);
-            margin: 0 auto;
+        .main {
+            position: relative;
             text-align: center;
-            padding: 0 1rem;
-        }
-
-        /*  -------------  */
-        .passion {
-            padding-top: 1rem;
-            padding-bottom: 1rem;
-        }
-
-        .i-am {
-            margin-bottom: 0;
-            padding-bottom: 0;
+            font-size: 4rem;
+            padding: 2rem;
             font-weight: bold;
+            letter-spacing: -0.1rem;
+            line-height: 1;
         }
 
-        .my-links {
-            margin-top: 0;
-            padding-top: 0;
-            font-size: var(--smallerFontSize);
-            color: var(--semiSubtleColor);
+        .main img {
+            width: 50%;
+            height: auto;
+            margin-top: 1rem;
         }
 
-        .my-links a {
-            color: var(--semiSubtleColor);
+        .serv {
+            color: rgb(71, 202, 71);
         }
 
-        /*  -------------  */
-        .touch {
-            padding-top: 1rem;
-            padding-bottom: 1rem;
-            font-size: var(--smallerFontSize);
-            color: var(--semiSubtleColor);
-        }
-
-        .name {
-            font-weight: bold;
-        }
-
-        .legal {
+        .legal,
+        .legal a {
             color: var(--subtleColor);
+            font-size: 0.7rem;
         }
 
-        /*  -------------  */
-        footer div {
-            padding-top: 1rem;
-            padding-bottom: 1rem;
-            font-size: 0.8em;
-            color: var(--subtleColor);
-        }
-
-        footer a,
-        footer a:visited {
-            color: var(--subtleColor);
+        footer {
+            text-align: center;
+            padding: 1rem;
+            padding-top: 3rem;
         }
     </style>
-    <script type="application/ld+json">
-      {
-        "@context": "http://schema.org",
-
-        "@type": "Organization",
-        "legalName": "Undefuned s.r.o.",
-        "email": "david@undefuned.com",
-        "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "Revolucni 1082/8",
-            "postalCode": "CZ11000",
-            "addressLocality": "Prague",
-            "addressCountry": "CZ"
-        },
-        "taxID": "",
-        "founder": {
-            "@type": "Person",
-            "name": "David Cizek",
-            "jobTitle": "Cloud architect; AWS, microservices, serverless; Node.js, Go developer",
-            "sameAs": [
-              "https://www.linkedin.com/in/davidcizek",
-              "https://github.com/dacz"
-            ]
-        }
-      }
-    </script>
-    <script type="text/javascript">
-        function openit() {
-            var a = "ma"
-            var b = "ilto:"
-            var c = "funed.c"
-            var d = "david"
-            document.location = `${a}${b}${d}${String.fromCharCode(65 - 1)}unde${c}om`;
-        }
-    </script>
 </head>
 
 <body>
-    <div class="passion">
-        <div class="page">
-            <p class="i-am">David Cizek</p>
-            <p class="my-links"> (<a href="#" onClick="openit()" title="send me an email">email</a>,
-                <a href="https://www.linkedin.com/in/davidcizek"
-                    title="linkedIn profile">linkedIn</a>) </p>
-            <p>microservices, serverless, AWS cloud, go, node.js</p>
-        </div>
+    <div class="main"><span class="serv">when you
+            need:</span><br />microservices<br />serverless<br />AWS
+        cloud<br />node.js<br />go<br /><img src="web.png" title="contact us">
     </div>
-    <div class="touch">
+    <footer>
         <div class="page">
-            <p class="name">Undefuned s.r.o.</p>
-            <p class="addr"><span class="inone">Revolucni 1082/8,</span> <span class="inone">110 00
-                    Prague 1,</span> <span class="inone">Czech Republic</span></p>
-            <p class="legal"><span class="inone">companyID: 086 67 853,</span> registered in
-                commercial register <span class="inone">in Prague,</span> <span class="inone">Czech
-                    Republic,</span> <span class="inone">section C,</span> <span
-                    class="inone">insert 322903</span></p>
+            <p class="legal"><span class="inone">Legal matter:</span> <span class="inone">Undefuned
+                    s.r.o.,</span> <span class="inone">Revolucni 1082/8,</span> <span
+                    class="inone">110 00 Prague 1,</span> <span class="inone">Czech Republic,
+                    Europe.</span><br /><span class="inone">CompanyID: 086 67 853,</span> registered
+                in commercial register <span class="inone">in Prague,</span> <span
+                    class="inone">Czech Republic,</span> <span class="inone">section C,</span> <span
+                    class="inone">insert 322903</span><br />No cookies here. Content is created with
+                <a href="https://creativecommons.org/licenses/by/4.0/"
+                    title="Creative Common BY license">cc-by license</a>.</p>
         </div>
-    </div>
-    <footer class="page">
-        <div> No cookies here. Content is created with <a
-                href="https://creativecommons.org/licenses/by/4.0/"
-                title="Creative Common BY license">cc-by license</a>. </div>
     </footer>
 </body>
 
