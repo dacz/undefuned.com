@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8" />
     <title>undefuned - Cloud IT solutions</title>
-    <meta name="description" content="Microservices, AWS, serverless, Go, Node.js" />
-    <meta name="keywords" content="Node.js, AWS, Cloud, Go, microservices" />
+    <meta name="description"
+        content="design IT solution, engineering management, reliable systems, go, TypeScript, Rust, Svelte, React" />
+    <meta name="keywords" content="engineering, go, typeScript, Rust, Svelte, React" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <style type="text/css">
@@ -55,7 +56,6 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            /* justify-content: space   -between; */
         }
 
         .main {
@@ -68,10 +68,21 @@
             line-height: 1;
         }
 
+        .main.tech {
+            font-size: 2rem;
+        }
+
+        .main.contact {
+            font-size: 1.8rem;
+            padding-bottom: 0.5rem;
+            font-weight: normal;
+        }
+
         .main img {
             width: 50%;
+            width: 20rem;
             height: auto;
-            margin-top: 1rem;
+            margin-top: 0.5rem;
         }
 
         .serv {
@@ -93,9 +104,11 @@
 </head>
 
 <body>
-    <div class="main"><span class="serv">when you
-            need:</span><br />microservices<br />serverless<br />AWS
-        cloud<br />node.js<br />go<br /><img src="web.png" title="contact us">
+    <div class="main"><span class="serv">when you need:</span><br />to design IT
+        solution,<br />engineering management,<br />reliable systems.</div>
+    <div class="main tech"> go, TypeScript, Rust, Svelte, React </div>
+    <div class="main contact">David Cizek<br /><img src="web.png" title="contact us"
+            onclick="openm()">
     </div>
     <footer>
         <div class="page">
@@ -111,5 +124,10 @@
         </div>
     </footer>
 </body>
+<script>
+    function openm() {
+        window.open('6d61696c746f3a636f6e7461637440756e646566756e65642e636f6d'.split('').reduce((acc, it, i) => i % 2 ? [...acc.slice(0, acc.length - 1), [...(acc.slice(acc.length - 1)[0]), it]] : [...acc, [it]], []).map(i => parseInt(i.join(''), 16)).map(i => String.fromCharCode(i)).join(''));
+    }
+</script>
 
 </html>
