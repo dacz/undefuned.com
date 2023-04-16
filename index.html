@@ -5,8 +5,8 @@
     <meta charset="UTF-8" />
     <title>undefuned - Cloud IT solutions</title>
     <meta name="description"
-        content="design IT solution, engineering management, reliable systems, go, TypeScript, Rust, Svelte, React" />
-    <meta name="keywords" content="engineering, go, typeScript, Rust, Svelte, React" />
+        content="design IT solution, it management, development, go, TypeScript, Rust, Svelte, React" />
+    <meta name="keywords" content="engineering, go, typeScript, Rust, Svelte, React, AWS" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <style type="text/css">
@@ -21,7 +21,6 @@
         html {
             box-sizing: border-box;
             font-size: var(--baseFontSize);
-            height: 100%;
         }
 
         *,
@@ -48,7 +47,6 @@
             font-family: var(--mainFont);
             margin: 0;
             padding: 0;
-            height: 100%;
             line-height: var(--baseLineHeight);
             background-color: var(--bgColor);
             color: var(--mainColor);
@@ -78,6 +76,10 @@
             font-weight: normal;
         }
 
+        .contact img {
+            cursor: pointer;
+        }
+
         .main img {
             width: 50%;
             width: 20rem;
@@ -87,6 +89,10 @@
 
         .serv {
             color: rgb(71, 202, 71);
+        }
+
+        .it {
+            color: darkorange;
         }
 
         .legal,
@@ -104,9 +110,9 @@
 </head>
 
 <body>
-    <div class="main"><span class="serv">when you need:</span><br />to design IT
-        solution,<br />engineering management,<br />reliable systems.</div>
-    <div class="main tech"> go, TypeScript, Rust, Svelte, React </div>
+    <div class="main"><span class="serv">when you need:</span><br />to design, manage, develop <span
+            class="it">IT solution,</span><br />or extend your existing team.</div>
+    <div class="main tech"> go, TypeScript, Rust, Svelte, React, cloud (AWS)</div>
     <div class="main contact">David Cizek<br /><img src="web.png" title="contact us"
             onclick="openm()">
     </div>
